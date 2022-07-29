@@ -1,2 +1,118 @@
+@use "/src/main";
 .navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background-color: var(--white);
+  width: 100%;
+  padding: 0 10px;
+  box-shadow: 0px 2px 20px rgb(1 41 112 / 10%);
+
+  a,
+  a:active,
+  a:visited {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  .logo {
+    flex: 1;
+    height: 60px;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primary-color);
+    // margin-right: 150px;
+    .icon-logo {
+      padding: 0 3px;
+      border: 2px solid #000;
+      font-size: 2rem;
+      margin-right: 10px;
+
+      @include main.md {
+        display: inline;
+        margin-right: 0;
+      }
+    }
+    .text-logo {
+      display: none;
+
+      @include main.md {
+        display: inline;
+      }
+    }
+  }
+  .collapse-button {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 70%;
+    margin: 0 20px;
+    border: 1px solid rgba(1, 41, 112, 0.2);
+    overflow: hidden;
+    border-radius: 5px;
+    input {
+      height: 100%;
+      width: 100%;
+      padding: 10px;
+      border: none;
+    }
+
+    .search-icon {
+      height: 70%;
+      display: flex;
+      align-items: center;
+      background-color: inherit;
+      color: grey;
+      padding: 0 10px;
+      border: none;
+      font-size: 2.7rem;
+      cursor: pointer;
+    }
+  }
+  .right {
+    flex: 3;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+
+    .navbar-icon {
+      font-size: 2.7rem;
+      cursor: pointer;
+
+      display: flex;
+      color: var(--primary-color);
+      margin-right: 20px;
+    }
+    .darkmode {
+      margin-right: 10px;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .name {
+      margin-left: 7px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+    .accordion {
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      color: var(--primary-color);
+    }
+  }
 }

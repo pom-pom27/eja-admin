@@ -11,7 +11,7 @@
 */
 
 @mixin sm {
-  @media screen and (max-width: 576px) {
+  @media screen and (min-width: 576px) {
     @content;
   }
 }
@@ -20,7 +20,7 @@
     @content;
   }
 }
-@mixin l {
+@mixin lg {
   @media screen and (min-width: 1024px) {
     @content;
   }

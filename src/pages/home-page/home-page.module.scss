@@ -1,14 +1,53 @@
+@use "/src/main";
 .home-page {
   display: flex;
   position: relative;
 
   .home-container {
     position: absolute;
-    left: 300px;
+    top: 60px;
     flex: 1;
     transition: all 0.3s ease;
+    transform: translateX(0);
+
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & > * {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .left {
+      flex: 3;
+      .widgets {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 2rem;
+      }
+    }
+    .right {
+      flex: 1;
+    }
+
+    @include main.lg() {
+      transform: translateX(300px);
+
+      width: calc(100% - 300px);
+      flex-direction: row;
+      .widgets {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
   }
   .full-width {
-    left: 0;
+    transform: translateX(0);
+    width: 100%;
   }
 }

@@ -13,6 +13,7 @@ export const orangeIcon: IconColor = { bg: "#ffecdf", icon: "#ff771d" };
 interface ICard {
   title: string;
   time?: TTime;
+  value?: string;
   children?: ReactNode;
   iconColor?: IconColor;
 }
@@ -20,6 +21,7 @@ interface ICard {
 const Card = ({
   title,
   time = "Today",
+  value,
   iconColor = blueIcon,
   children,
 }: ICard) => {
@@ -47,7 +49,7 @@ const Card = ({
               <ShoppingCartOutlined fontSize="inherit" color="inherit" />
             </div>
             <div className={styles.content}>
-              <div className={styles.title}>145</div>
+              <div className={styles.title}>{value}</div>
               <div className={styles.subtitle}>
                 <span>12%</span> increase
               </div>

@@ -16,12 +16,12 @@ import clsx from "clsx";
 import { ReactNode } from "react";
 import styles from "./sidebar.module.scss";
 interface ISidebar {
-  isSidebarShown: boolean;
+  isSidebarHidden: boolean;
 }
 
-const Sidebar = ({ isSidebarShown }: ISidebar) => {
+const Sidebar = ({ isSidebarHidden }: ISidebar) => {
   return (
-    <nav className={clsx(styles.sidebar, isSidebarShown && styles.show)}>
+    <nav className={clsx(styles.sidebar, isSidebarHidden && styles.show)}>
       <div className={styles.center}>
         <SidebarItem title="MAIN">
           <SubItem svgIcon={<Dashboard />} title="Dashboard" />

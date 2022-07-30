@@ -1,18 +1,18 @@
 import { useMediaQuery } from "@mui/material";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
+import { LineChart } from "recharts";
 import Card, {
   blueIcon,
   greenIcon,
   orangeIcon,
 } from "../../components/card/Card";
-import LineChart from "../../components/line-chart/LineChart";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import styles from "./home-page.module.scss";
-interface IHomePage {}
+import styles from "./kocak.module.scss";
+interface IKocak {}
 
-const HomePage = ({}: IHomePage) => {
+const Kocak = ({}: IKocak) => {
   const matches = useMediaQuery("(max-width: 1400px)");
   const [isSidebarHidden, setIsSidebarHidden] = useState(false);
 
@@ -23,9 +23,9 @@ const HomePage = ({}: IHomePage) => {
   const handleSidebar = () =>
     setIsSidebarHidden((isSidebarHidden) => !isSidebarHidden);
   return (
-    <div className={styles["home-page"]}>
+    <div className={styles.kocak}>
+      Kocak Web
       <Navbar onClick={handleSidebar} />
-
       <Sidebar isSidebarHidden={isSidebarHidden} />
       <main
         className={clsx(
@@ -59,4 +59,4 @@ const HomePage = ({}: IHomePage) => {
   );
 };
 
-export default HomePage;
+export default Kocak;

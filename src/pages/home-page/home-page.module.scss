@@ -1,61 +1,26 @@
 @use "/src/main";
 .home-page {
-  display: flex;
   position: relative;
 
-  .home-container {
-    border: 1px solid #000;
+  .content {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
     position: absolute;
     top: 60px;
-    flex: 1;
-    transition: all 0.3s ease;
-    transform: translateX(0);
 
-    width: 100%;
-    padding: 20px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
-    & > * {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .left {
-      .widgets {
-        display: flex;
-        flex-wrap: wrap;
-
-        gap: 2rem;
-      }
-    }
-    .right {
-      flex: 1;
+    .container {
+      width: 100%;
+      padding: 20px;
+      transition: all 0.3s ease;
     }
 
-    @include main.xl() {
-      .left {
-        border: 1px solid #000;
-        flex: 3;
-      }
-      .right {
-        border: 1px solid #000;
-        flex: 1 0 200px;
-      }
-      transform: translateX(300px);
-
-      width: calc(100% - 300px);
-      flex-direction: row;
-      .widgets {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+    .full {
+      @include main.xl() {
+        margin-left: 300px;
       }
     }
-  }
-  .full-width {
-    transform: translateX(0);
-    width: 100%;
   }
 }

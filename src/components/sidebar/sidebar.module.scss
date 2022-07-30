@@ -4,6 +4,8 @@
   width: 300px;
   position: fixed;
   overflow-y: auto;
+  min-height: 100vh;
+  padding-top: 10px;
 
   z-index: 2;
   top: 60px;
@@ -19,6 +21,13 @@
     ul {
       list-style: none;
     }
+  }
+
+  a,
+  a:active,
+  a:visited {
+    text-decoration: none;
+    color: var(--primary-color);
   }
 
   .sidebar-item {
@@ -38,9 +47,6 @@
       &:hover {
         color: var(--color-hover);
         background-color: #f6f9ff;
-        svg {
-          color: var(--color-hover);
-        }
       }
       svg {
         font-size: 2rem;

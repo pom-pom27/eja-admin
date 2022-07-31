@@ -7,60 +7,16 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { dataLineChart } from "../../util/dummyData";
 import styles from "./line-chart.module.scss";
 
 interface ILineChart {}
-
-const data = [
-  {
-    name: "00:00",
-    sales: 31,
-    revenue: 11,
-    costumers: 15,
-  },
-  {
-    name: "00:10",
-    sales: 40,
-    revenue: 31,
-    costumers: 11,
-  },
-  {
-    name: "00:20",
-    sales: 28,
-    revenue: 45,
-    costumers: 32,
-  },
-  {
-    name: "00:30",
-    sales: 51,
-    revenue: 32,
-    costumers: 18,
-  },
-  {
-    name: "00:40",
-    sales: 42,
-    revenue: 34,
-    costumers: 9,
-  },
-  {
-    name: "00:50",
-    sales: 82,
-    revenue: 52,
-    costumers: 25,
-  },
-  {
-    name: "00:60",
-    sales: 56,
-    revenue: 41,
-    costumers: 11,
-  },
-];
 
 const LineChart = ({}: ILineChart) => {
   return (
     <div className={styles["line-chart"]}>
       <ResponsiveContainer width={"99%"}>
-        <AreaChart data={data}>
+        <AreaChart data={dataLineChart}>
           <defs>
             <linearGradient id="colorSales" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#4154F1" stopOpacity={0.5} />

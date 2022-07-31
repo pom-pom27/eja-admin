@@ -43,6 +43,17 @@ const Tables = ({}: ITables) => {
     <div className={styles.tables}>
       <DataGrid
         className={styles.table}
+        componentsProps={{
+          pagination: {
+            sx: {
+              "& .MuiTablePagination-displayedRows": {
+                color: "#444444",
+                fontFamily: "Nunito",
+                fontSize: "initial",
+              },
+            },
+          },
+        }}
         rows={tableRows}
         columns={columns}
         pageSize={5}

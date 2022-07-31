@@ -6,13 +6,14 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import styles from "./home-page.module.scss";
 interface IHomePage {}
 
+//memoization
 const isSidebarHiddenSelector = (state: AppState) => state.isSidebarHidden;
 const isToggleSidebarHiddenSelector = (state: AppState) => state.toggleSidebar;
 
 const HomePage = ({}: IHomePage) => {
+  const matches = useMediaQuery("(max-width: 1400px)");
   const isSidebarHidden = appStore(isSidebarHiddenSelector);
   const toggleSidebar = appStore(isToggleSidebarHiddenSelector);
-  const matches = useMediaQuery("(max-width: 1400px)");
 
   const handleClick = () => {
     if (matches && !isSidebarHidden) {

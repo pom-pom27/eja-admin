@@ -4,6 +4,8 @@ import Card, {
   orangeIcon,
 } from "../../components/card/Card";
 import LineChart from "../../components/line-chart/LineChart";
+import Timelines from "../../components/timelines/Timelines";
+
 import styles from "./dashboard.module.scss";
 interface IDashboard {}
 
@@ -23,10 +25,7 @@ const Dashboard = ({}: IDashboard) => {
         <Card title="Top Selling" />
       </div>
       <div className={styles.right}>
-        <Card
-          title="Recent Activity"
-          children={<div style={{ height: "300px" }}></div>}
-        />
+        <Card title="Recent Activity" children={<Timelines />} />
         <Card title="Bug Report" />
         <Card title="Website Traffic" />
         <Card title="News & Updates" />

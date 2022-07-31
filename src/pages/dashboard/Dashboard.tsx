@@ -4,6 +4,7 @@ import Card, {
   orangeIcon,
 } from "../../components/card/Card";
 import LineChart from "../../components/line-chart/LineChart";
+import Tables from "../../components/tables/Tables";
 import Timelines from "../../components/timelines/Timelines";
 
 import styles from "./dashboard.module.scss";
@@ -21,7 +22,9 @@ const Dashboard = ({}: IDashboard) => {
         <Card title="Reports">
           <LineChart />
         </Card>
-        <Card title="Recent Sales" />
+        <Card title="Recent Sales">
+          <Tables />
+        </Card>
         <Card title="Top Selling" />
       </div>
       <div className={styles.right}>

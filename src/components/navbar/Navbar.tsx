@@ -6,17 +6,40 @@ import {
   NotificationsNoneRounded,
   Search,
 } from "@mui/icons-material";
-import { Avatar, Badge } from "@mui/material";
+import { Avatar, Badge, useMediaQuery } from "@mui/material";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import appStore from "../../appState";
 import styles from "./navbar.module.scss";
 interface INavbar {}
 
 const Navbar = ({}: INavbar) => {
+  const matches = useMediaQuery("(max-width: 567px)");
+
+  const [isSearchHidden, setSearchHidden] = useState(false);
   const toggleSidebar = appStore((state) => state.toggleSidebar);
 
   return (
     <nav className={styles.navbar}>
+      {isSearchHidden && (
+        <div className={styles["search-mobile-wrapper"]}>
+          <form action="#" className={styles["search-mobile"]}>
+            <input type="text" placeholder="Search" name="search" />
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                if (matches) {
+                  setSearchHidden((SearchHidden) => !SearchHidden);
+                }
+              }}
+              className={styles["search-icon-mobile"]}
+            >
+              <Search fontSize="inherit" />
+            </button>
+          </form>
+        </div>
+      )}
+
       <div className={styles.logo}>
         <Link to={"/"}>
           <span className={styles["icon-logo"]}>EA</span>
@@ -28,7 +51,16 @@ const Navbar = ({}: INavbar) => {
       </div>
       <form action="#" className={styles.search}>
         <input type="text" placeholder="Search" name="search" />
-        <button className={styles["search-icon"]}>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+
+            if (matches) {
+              setSearchHidden((SearchHidden) => !SearchHidden);
+            }
+          }}
+          className={styles["search-icon"]}
+        >
           <Search fontSize="inherit" />
         </button>
       </form>
@@ -47,7 +79,7 @@ const Navbar = ({}: INavbar) => {
         <div className={styles.profile}>
           <Avatar
             alt="Remy Sharp"
-            src="https://mui.com//static/images/avatar/1.jpg"
+            src="https://i.scdn.co/image/ab67706c0000bebb6e187466acef03892988f41b"
           />
           <div className={styles.name}>Selja Sampe Rante</div>
 

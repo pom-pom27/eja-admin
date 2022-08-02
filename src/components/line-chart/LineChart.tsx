@@ -11,7 +11,7 @@ import { dataLineChart } from "../../util/dummyData";
 import styles from "./line-chart.module.scss";
 
 interface ILineChart {}
-
+//janky
 const LineChart = ({}: ILineChart) => {
   return (
     <div className={styles["line-chart"]}>

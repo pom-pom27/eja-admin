@@ -6,7 +6,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import styles from "./home-page.module.scss";
 interface IHomePage {}
 
-//memoization
+//memoization state zustand
 const isSidebarHiddenSelector = (state: AppState) => state.isSidebarHidden;
 const isToggleSidebarHiddenSelector = (state: AppState) => state.toggleSidebar;
 
@@ -16,6 +16,7 @@ const HomePage = ({}: IHomePage) => {
   const toggleSidebar = appStore(isToggleSidebarHiddenSelector);
 
   const handleClick = () => {
+    //On mobile, hide sidebar when touching at content
     if (matches && !isSidebarHidden) {
       toggleSidebar();
     }

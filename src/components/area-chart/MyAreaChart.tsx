@@ -12,10 +12,10 @@ import styles from "./line-chart.module.scss";
 
 interface ILineChart {}
 //janky
-const LineChart = ({}: ILineChart) => {
+const MyAreaChart = ({}: ILineChart) => {
   return (
-    <div className={styles["line-chart"]}>
-      <ResponsiveContainer width={"99%"}>
+    <div className={styles["area-chart"]}>
+      <ResponsiveContainer width={"98%"}>
         <AreaChart data={dataLineChart}>
           <defs>
             <linearGradient id="colorSales" x1="0" y1="0" x2="0" y2="1">
@@ -62,4 +62,4 @@ const LineChart = ({}: ILineChart) => {
   );
 };
 
-export default LineChart;
+export default MyAreaChart;

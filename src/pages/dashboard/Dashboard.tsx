@@ -1,9 +1,10 @@
+import MyAreaChart from "../../components/area-chart/MyAreaChart";
 import Card, {
   blueIcon,
   greenIcon,
   orangeIcon,
 } from "../../components/card/Card";
-import LineChart from "../../components/line-chart/LineChart";
+import MyRadarChart from "../../components/my-radar-chart/MyRadarChart";
 import Tables from "../../components/tables/Tables";
 import Timelines from "../../components/timelines/Timelines";
 
@@ -20,7 +21,7 @@ const Dashboard = ({}: IDashboard) => {
           <Card value="1244" title="Costumer" iconColor={orangeIcon} />
         </div>
         <Card title="Reports">
-          <LineChart />
+          <MyAreaChart />
         </Card>
         <Card title="Recent Sales">
           <Tables />
@@ -29,7 +30,9 @@ const Dashboard = ({}: IDashboard) => {
       </div>
       <div className={styles.right}>
         <Card title="Recent Activity" children={<Timelines />} />
-        <Card title="Bug Report" />
+        <Card title="Budget Report">
+          <MyRadarChart />
+        </Card>
         <Card title="Website Traffic" />
         <Card title="News & Updates" />
       </div>

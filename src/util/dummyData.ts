@@ -163,3 +163,41 @@ export const userRows = [
     age: 65,
   },
 ];
+export const dataRadar = [
+  {
+    subject: "Sales",
+    A: 120,
+    B: 110,
+    fullMark: 150,
+  },
+  {
+    subject: "Marketing",
+    A: 98,
+    B: 130,
+    fullMark: 150,
+  },
+  {
+    subject: "Development",
+    A: 86,
+    B: 130,
+    fullMark: 150,
+  },
+  {
+    subject: "Costumer Support",
+    A: 99,
+    B: 100,
+    fullMark: 150,
+  },
+  {
+    subject: "IT",
+    A: 85,
+    B: 90,
+    fullMark: 150,
+  },
+  {
+    subject: "Admin",
+    A: 65,
+    B: 85,
+    fullMark: 150,
+  },
+];

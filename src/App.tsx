@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./app.scss";
 import Dashboard from "./pages/dashboard/Dashboard";
 import HomePage from "./pages/home-page/HomePage";
@@ -16,6 +16,7 @@ const App = ({}: IApp) => {
           </Route>
           <Route path="login" />
           <Route path="register" />
+          <Route path="eja-admin" element={<Navigate to="/" />} />
           <Route path="products"></Route>
           <Route
             path="*"

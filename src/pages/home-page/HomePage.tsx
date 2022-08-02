@@ -40,3 +40,7 @@ const HomePage = ({}: IHomePage) => {
 };
 
 export default HomePage;
+
+//swap chart library recharts -> charts.js
+//top selling - basic table
+//webiste traffic - pie chart

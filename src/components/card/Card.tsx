@@ -1,4 +1,5 @@
 import { MoreVertRounded, ShoppingCartOutlined } from "@mui/icons-material";
+import clsx from "clsx";
 import { ReactNode } from "react";
 import styles from "./card.module.scss";
 
@@ -16,6 +17,7 @@ interface ICard {
   value?: string;
   children?: ReactNode;
   iconColor?: IconColor;
+  isStretch?: boolean;
 }
 
 const Card = ({
@@ -24,9 +26,10 @@ const Card = ({
   value,
   iconColor = blueIcon,
   children,
+  isStretch = true,
 }: ICard) => {
   return (
-    <div className={styles.card}>
+    <div className={clsx(styles.card, isStretch && styles.stretch)}>
       <div className={styles.header}>
         <div className={styles.left}>
           <div className={styles.title}>{title}</div>

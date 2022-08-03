@@ -1,3 +1,38 @@
+@use "/src/main";
 .news {
   width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .news-item {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 90px;
+      object-fit: cover;
+      border-radius: 5px;
+      height: 80px;
+
+      @include main.sm {
+        height: 100%;
+      }
+    }
+    .text {
+      margin-left: 10px;
+    }
+    h3 {
+      font-size: 1.4rem;
+      color: var(--primary-color);
+      @include main.sm {
+        font-size: inherit;
+      }
+    }
+    p {
+      color: var(--dark-grey);
+      font-size: 1.5rem;
+    }
+  }
 }

@@ -16,20 +16,20 @@ interface IDashboard {}
 
 const Dashboard = ({}: IDashboard) => {
   return (
-    <main className={styles["dashboard"]}>
+    <main className={styles.dashboard}>
       <div className={styles.left}>
         <div className={styles.widgets}>
           <Card value="145" title="Sales" iconColor={blueIcon} />
           <Card value="$3,264" title="Revenue" iconColor={greenIcon} />
           <Card value="1244" title="Costumer" iconColor={orangeIcon} />
         </div>
-        <Card title="Reports">
+        <Card isStretch={false} title="Reports">
           <MyAreaChart />
         </Card>
-        <Card title="Recent Sales">
+        <Card isStretch={false} title="Recent Sales">
           <Tables />
         </Card>
-        <Card title="Top Selling" time="This Month">
+        <Card isStretch={false} title="Top Selling" time="This Month">
           <BasicTable />
         </Card>
       </div>

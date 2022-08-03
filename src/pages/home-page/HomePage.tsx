@@ -41,5 +41,5 @@ const HomePage = ({}: IHomePage) => {
 
 export default HomePage;
 
-//webiste traffic - pie chart
+//news list
 //use react memo

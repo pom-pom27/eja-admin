@@ -32,8 +32,17 @@ const data = [
 const News = ({}: INews) => {
   return (
     <div className={styles.news}>
-      {data.map((datum) => (
-        <div className={styles.name}>Name</div>
+      {data.map((news) => (
+        <div className={styles["news-item"]}>
+          <img
+            src="https://bootstrapmade.com/demo/templates/NiceAdmin/assets/img/news-1.jpg"
+            alt="news"
+          />
+          <div className={styles.text}>
+            <h3>{news.title}</h3>
+            <p>{news.description}</p>
+          </div>
+        </div>
       ))}
     </div>
   );

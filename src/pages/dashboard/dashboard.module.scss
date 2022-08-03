@@ -19,10 +19,10 @@
       gap: 2rem;
     }
   }
-  .right {
-  }
 
   @include main.xl() {
+    flex-direction: row;
+
     .left {
       flex: 2;
     }
@@ -30,7 +30,6 @@
       flex: 1;
     }
 
-    flex-direction: row;
     .widgets {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;

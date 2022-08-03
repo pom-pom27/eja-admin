@@ -3,7 +3,6 @@
   flex-direction: column;
   padding: 1.6rem;
   border-radius: 5px;
-  flex: 1;
   background-color: var(--white);
   box-shadow: 0px 0 30px rgb(1 41 112 / 10%);
 
@@ -74,4 +73,8 @@
       font-size: 40px;
     }
   }
+}
+
+.stretch {
+  flex: 1;
 }

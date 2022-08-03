@@ -1,7 +1,6 @@
 import {
   ArrowDropDownRounded,
   ChatBubbleOutlineRounded,
-  DarkModeOutlined,
   Menu,
   NotificationsNoneRounded,
   Search,
@@ -65,9 +64,9 @@ const Navbar = ({}: INavbar) => {
         </button>
       </form>
       <div className={styles.right}>
-        <div className={`${styles["navbar-icon"]} ${styles.darkmode}`}>
+        {/* <div className={`${styles["navbar-icon"]} ${styles.darkmode}`}>
           <DarkModeOutlined fontSize="inherit" />
-        </div>
+        </div> */}
         <div className={styles["navbar-icon"]}>
           <NotificationsNoneRounded fontSize="inherit" />
           <Badge badgeContent={4} color="info" />
@@ -81,7 +80,7 @@ const Navbar = ({}: INavbar) => {
             alt="Remy Sharp"
             src="https://i.scdn.co/image/ab67706c0000bebb6e187466acef03892988f41b"
           />
-          <div className={styles.name}>Selja Sampe Rante</div>
+          <div className={styles.name}>Eja</div>
 
           <div className={styles.accordion}>
             <ArrowDropDownRounded fontSize="inherit" />

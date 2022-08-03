@@ -80,6 +80,36 @@ export const dataLineChart = [
     costumers: 11,
   },
 ];
+export const dataSpending = [
+  {
+    name: "February",
+    amount: 11,
+  },
+  {
+    name: "March",
+    amount: 31,
+  },
+  {
+    name: "April",
+    amount: 45,
+  },
+  {
+    name: "May",
+    amount: 32,
+  },
+  {
+    name: "June",
+    amount: 34,
+  },
+  {
+    name: "July",
+    amount: 52,
+  },
+  {
+    name: "August",
+    amount: 41,
+  },
+];
 
 export const userRows = [
   {

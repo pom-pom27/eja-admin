@@ -15,7 +15,7 @@ interface ILineChart {}
 const MyAreaChart = ({}: ILineChart) => {
   return (
     <div className={styles["area-chart"]}>
-      <ResponsiveContainer width={"98%"}>
+      <ResponsiveContainer width={"98%"} height={"99%"}>
         <AreaChart data={dataLineChart}>
           <defs>
             <linearGradient id="colorSales" x1="0" y1="0" x2="0" y2="1">

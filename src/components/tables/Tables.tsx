@@ -4,7 +4,7 @@ import { tableRows } from "../../util/dummyData";
 import styles from "./tables.module.scss";
 interface ITables {}
 
-const currencyFormatter = new Intl.NumberFormat("en-US", {
+export const currencyFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
 });

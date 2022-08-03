@@ -1,4 +1,12 @@
-import { Dashboard, Person } from "@mui/icons-material";
+import {
+  CreditCard,
+  Dashboard,
+  InsertChart,
+  LocalShipping,
+  NotificationsNone,
+  Person,
+  Store,
+} from "@mui/icons-material";
 import { useMediaQuery } from "@mui/material";
 import clsx from "clsx";
 import { ReactNode, useEffect } from "react";
@@ -32,46 +40,34 @@ const Sidebar = ({}: ISidebar) => {
         </SidebarItem>
         <SidebarItem title="LIST">
           <SubItem to="users" svgIcon={<Person />} title="Users" />
-          {/* <SubItem svgIcon={<Store />} title="Products" />
-          <SubItem svgIcon={<CreditCard />} title="Orders" />
-          <SubItem svgIcon={<LocalShipping />} title="Delivery" /> */}
+          <SubItem to="sds" svgIcon={<Store />} title="Products" />
+          <SubItem to="Produsadsdcts" svgIcon={<CreditCard />} title="Orders" />
+          <SubItem to="asdas" svgIcon={<LocalShipping />} title="Delivery" />
         </SidebarItem>
-        {/* <SidebarItem title="USEFUL">
-          <SubItem svgIcon={<InsertChart />} title="Stats" />
-          <SubItem svgIcon={<NotificationsNone />} title="Notifications" />
+        <SidebarItem title="USEFUL">
+          <SubItem to="3232" svgIcon={<InsertChart />} title="Stats" />
+          <SubItem
+            to="aasdassdas"
+            svgIcon={<NotificationsNone />}
+            title="Notifications"
+          />
         </SidebarItem>
-        <SidebarItem title="SERVICE">
-          <SubItem svgIcon={<SettingsSystemDaydream />} title="System" />
-          <SubItem svgIcon={<PsychologyOutlined />} title="Logs" />
-          <SubItem svgIcon={<SettingsApplications />} title="Settings" />
-        </SidebarItem>
-        <SidebarItem title="USER">
-          <SubItem svgIcon={<AccountCircle />} title="Profile" />
-          <SubItem svgIcon={<ExitToApp />} title="Logout" />
-        </SidebarItem>
-        <SidebarItem title="USER">
-          <SubItem svgIcon={<AccountCircle />} title="Profile" />
-          <SubItem svgIcon={<ExitToApp />} title="Logout" />
-        </SidebarItem>
-        <SidebarItem title="USER">
-          <SubItem svgIcon={<AccountCircle />} title="Profile" />
-          <SubItem svgIcon={<ExitToApp />} title="Logout" />
-        </SidebarItem>
-        <SidebarItem title="USER">
-          <SubItem svgIcon={<AccountCircle />} title="Profile" />
-          <SubItem svgIcon={<ExitToApp />} title="Logout" />
+        {/* <SidebarItem title="SERVICE">
+          <SubItem
+            to="sas"
+            svgIcon={<SettingsSystemDaydream />}
+            title="System"
+          />
+          <SubItem to="dd" svgIcon={<PsychologyOutlined />} title="Logs" />
+          <SubItem
+            to="aa"
+            svgIcon={<SettingsApplications />}
+            title="Settings"
+          />
         </SidebarItem>
         <SidebarItem title="USER">
-          <SubItem svgIcon={<AccountCircle />} title="Profile" />
-          <SubItem svgIcon={<ExitToApp />} title="Logout" />
-        </SidebarItem>
-        <SidebarItem title="USER">
-          <SubItem svgIcon={<AccountCircle />} title="Profile" />
-          <SubItem svgIcon={<ExitToApp />} title="Logout" />
-        </SidebarItem>
-        <SidebarItem title="USER">
-          <SubItem svgIcon={<AccountCircle />} title="Profile" />
-          <SubItem svgIcon={<ExitToApp />} title="Logout" />
+          <SubItem to="ww" svgIcon={<AccountCircle />} title="Profile" />
+          <SubItem to="xx" svgIcon={<ExitToApp />} title="Logout" />
         </SidebarItem> */}
       </div>
       {/* <div className={styles.bottom}>

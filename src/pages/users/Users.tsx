@@ -94,6 +94,10 @@ const Users = ({}: IUsers) => {
         </Link>
       </div>
       <DataGrid
+        sx={{
+          backgroundColor: "white",
+          boxShadow: "0px 0 30px rgba(1, 41, 112, 0.1)",
+        }}
         autoHeight
         componentsProps={{
           pagination: {

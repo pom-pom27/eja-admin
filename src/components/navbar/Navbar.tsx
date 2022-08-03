@@ -7,7 +7,7 @@ import {
   Search,
 } from "@mui/icons-material";
 import { Avatar, Badge, useMediaQuery } from "@mui/material";
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Link } from "react-router-dom";
 import appStore from "../../appState";
 import styles from "./navbar.module.scss";
@@ -92,4 +92,4 @@ const Navbar = ({}: INavbar) => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

@@ -1,4 +1,5 @@
 import { useMediaQuery } from "@mui/material";
+import { memo } from "react";
 import { Outlet } from "react-router-dom";
 import appStore, { AppState } from "../../appState";
 import Navbar from "../../components/navbar/Navbar";
@@ -39,7 +40,4 @@ const HomePage = ({}: IHomePage) => {
   );
 };
 
-export default HomePage;
-
-//news list
-//use react memo
+export default memo(HomePage);

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import {
   Area,
   AreaChart,
@@ -14,7 +15,7 @@ interface ILineChart {}
 const MyAreaChart = ({}: ILineChart) => {
   return (
     <div className={styles["area-chart"]}>
-      <ResponsiveContainer width={"98%"}>
+      <ResponsiveContainer width={"91%"}>
         <AreaChart data={dataLineChart}>
           <defs>
             <linearGradient id="colorSales" x1="0" y1="0" x2="0" y2="1">
@@ -61,4 +62,4 @@ const MyAreaChart = ({}: ILineChart) => {
   );
 };
 
-export default MyAreaChart;
+export default memo(MyAreaChart);

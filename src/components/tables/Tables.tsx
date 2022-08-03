@@ -1,4 +1,5 @@
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { memo } from "react";
 import { tableRows } from "../../util/dummyData";
 import styles from "./tables.module.scss";
 interface ITables {}
@@ -65,4 +66,4 @@ const Tables = ({}: ITables) => {
   );
 };
 
-export default Tables;
+export default memo(Tables);

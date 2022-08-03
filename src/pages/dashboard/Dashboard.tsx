@@ -1,3 +1,4 @@
+import { memo } from "react";
 import MyAreaChart from "../../components/area-chart/MyAreaChart";
 import BasicTable from "../../components/basic-table/BasicTable";
 import Card, {
@@ -49,4 +50,4 @@ const Dashboard = ({}: IDashboard) => {
   );
 };
 
-export default Dashboard;
+export default memo(Dashboard);

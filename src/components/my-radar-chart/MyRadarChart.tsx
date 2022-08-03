@@ -15,7 +15,7 @@ interface IMyRadarChart {}
 const MyRadarChart = ({}: IMyRadarChart) => {
   return (
     <div className={styles["my-radar-chart"]}>
-      <ResponsiveContainer width={"91%"}>
+      <ResponsiveContainer debounce={500} width={"91%"}>
         <RadarChart outerRadius={90} data={dataRadar}>
           <PolarGrid />
           <PolarAngleAxis dataKey="subject" />

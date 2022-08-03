@@ -13,7 +13,7 @@ interface IMyPieChart {}
 const MyPieChart = ({}: IMyPieChart) => {
   return (
     <div className={styles["my-pie-chart"]}>
-      <ResponsiveContainer width={"91%"}>
+      <ResponsiveContainer debounce={500} width={"91%"}>
         <PieChart>
           <Pie
             data={pieData}

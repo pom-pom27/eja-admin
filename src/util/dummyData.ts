@@ -163,6 +163,48 @@ export const userRows = [
     age: 65,
   },
 ];
+export const topSellingData = [
+  {
+    id: 1143155,
+    product: "Acer Nitro 5",
+    img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+    amount: 785,
+    sold: "124",
+    revenue: "6534",
+  },
+  {
+    id: 2235235,
+    product: "Playstation 5",
+    img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
+    amount: 900,
+    sold: "87",
+    revenue: "5828",
+  },
+  {
+    id: 2342353,
+    product: "Redragon S101",
+    img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
+    amount: 35,
+    sold: "74",
+    revenue: "4508",
+  },
+  {
+    id: 2357741,
+    product: "Razer Blade 15",
+    img: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
+    amount: 920,
+    sold: "63",
+    revenue: "2016",
+  },
+  {
+    id: 2342355,
+    product: "ASUS ROG Strix",
+    img: "https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
+    amount: 2000,
+    sold: "41",
+    revenue: "3239",
+  },
+];
 export const dataRadar = [
   {
     subject: "Sales",
@@ -199,5 +241,33 @@ export const dataRadar = [
     A: 65,
     B: 85,
     fullMark: 150,
+  },
+];
+
+export const pieData = [
+  {
+    name: "SEO",
+    value: 400,
+    color: "#83a6ed",
+  },
+  {
+    name: "Direct",
+    value: 300,
+    color: "#8884d8",
+  },
+  {
+    name: "Email",
+    value: 300,
+    color: "#d0ed57",
+  },
+  {
+    name: "Ads",
+    value: 200,
+    color: "#a4de6c",
+  },
+  {
+    name: "Youtube Ads",
+    value: 278,
+    color: "#8dd1e1",
   },
 ];

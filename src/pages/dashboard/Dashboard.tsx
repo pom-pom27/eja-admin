@@ -1,10 +1,13 @@
 import MyAreaChart from "../../components/area-chart/MyAreaChart";
+import BasicTable from "../../components/basic-table/BasicTable";
 import Card, {
   blueIcon,
   greenIcon,
   orangeIcon,
 } from "../../components/card/Card";
+import MyPieChart from "../../components/my-pie-chart/MyPieChart";
 import MyRadarChart from "../../components/my-radar-chart/MyRadarChart";
+import News from "../../components/news/News";
 import Tables from "../../components/tables/Tables";
 import Timelines from "../../components/timelines/Timelines";
 
@@ -26,15 +29,21 @@ const Dashboard = ({}: IDashboard) => {
         <Card title="Recent Sales">
           <Tables />
         </Card>
-        <Card title="Top Selling" />
+        <Card title="Top Selling" time="This Month">
+          <BasicTable />
+        </Card>
       </div>
       <div className={styles.right}>
         <Card title="Recent Activity" children={<Timelines />} />
         <Card title="Budget Report">
           <MyRadarChart />
         </Card>
-        <Card title="Website Traffic" />
-        <Card title="News & Updates" />
+        <Card title="Website Traffic">
+          <MyPieChart />
+        </Card>
+        <Card title="News & Updates">
+          <News />
+        </Card>
       </div>
     </main>
   );

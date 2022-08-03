@@ -1,0 +1,11 @@
+@use "/src/main";
+.my-pie-chart {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+
+  @include main.sm() {
+    height: 300px;
+  }
+}

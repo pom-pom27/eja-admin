@@ -9,7 +9,7 @@ import {
   XAxis,
 } from "recharts";
 import { currencyFormatter } from "../../components/tables/Tables";
-import { dataSpending, tableRows } from "../../util/dummyData";
+import { dataSpending, tableRows, userRows } from "../../util/dummyData";
 import styles from "./user.module.scss";
 interface IUser {}
 
@@ -43,31 +43,21 @@ const User = ({}: IUser) => {
     <div className={styles.user}>
       <div className={styles.top}>
         <div className={styles.information}>
-          <div className={styles.img}>
-            <img
-              src="https://bootstrapmade.com/demo/templates/NiceAdmin/assets/img/profile-img.jpg"
-              alt="avatar"
-            />
-          </div>
-          <div className={styles.data}>
-            <div className={styles.name}>
-              <span>Name:</span> jondoe@gmail.com
-            </div>
-            <div className={styles.name}>
-              <span>Phone:</span> 089273722
-            </div>
-            <div className={styles.name}>
-              <span>Address:</span> Jl. Ayam Raya No 3A
-            </div>
-            <div className={styles.name}>
-              <span>Country:</span> Indonesia
-            </div>
-          </div>
+          <img
+            src="https://bootstrapmade.com/demo/templates/NiceAdmin/assets/img/profile-img.jpg"
+            alt="avatar"
+          />
+
+          <h2>{userId && userRows[parseInt(userId)].username}</h2>
+          <div className={styles.info}>Email: jondoe@gmail.com</div>
+          <div className={styles.info}>Phone: 0895372626</div>
+          <div className={styles.info}>Address: Jl. Haruna Jaya No 3A</div>
+          <div className={styles.info}>Country: Indonesia</div>
         </div>
         <div className={styles.spending}>
           <h2>User Spending</h2>
 
-          <ResponsiveContainer width="98%" height={400}>
+          <ResponsiveContainer width="98%">
             <AreaChart data={dataSpending}>
               <defs>
                 <linearGradient id="colorSales" x1="0" y1="0" x2="0" y2="1">

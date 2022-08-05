@@ -48,7 +48,7 @@ const User = ({}: IUser) => {
             alt="avatar"
           />
 
-          <h2>{userId && userRows[parseInt(userId)].username}</h2>
+          <h2>{userId && userRows[parseInt(userId) - 1].username}</h2>
           <div className={styles.info}>Email: jondoe@gmail.com</div>
           <div className={styles.info}>Phone: 0895372626</div>
           <div className={styles.info}>Address: Jl. Haruna Jaya No 3A</div>
@@ -57,7 +57,7 @@ const User = ({}: IUser) => {
         <div className={styles.spending}>
           <h2>User Spending</h2>
 
-          <ResponsiveContainer width="98%">
+          <ResponsiveContainer width="98%" height="100%">
             <AreaChart data={dataSpending}>
               <defs>
                 <linearGradient id="colorSales" x1="0" y1="0" x2="0" y2="1">

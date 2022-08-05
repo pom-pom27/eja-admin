@@ -36,4 +36,4 @@ const App = ({}: IApp) => {
 };
 export default App;
 
-//add single user page
+//TODO: fix single user spending area chart

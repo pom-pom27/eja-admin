@@ -2,7 +2,7 @@
 https://eja-admin.vercel.app
 
 
-# Build With:
+# Built With:
 - Typescript
 - React
 - MUI

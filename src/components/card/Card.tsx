@@ -1,4 +1,9 @@
-import { MoreVertRounded, ShoppingCartOutlined } from "@mui/icons-material";
+import {
+  AttachMoney,
+  MoreVertRounded,
+  People,
+  ShoppingCartOutlined,
+} from "@mui/icons-material";
 import clsx from "clsx";
 import { ReactNode } from "react";
 import styles from "./card.module.scss";
@@ -11,6 +16,12 @@ export const blueIcon: IconColor = { bg: "#f6f6fe", icon: "#4154f1" };
 export const greenIcon: IconColor = { bg: "#e0f8e9", icon: "#2eca6a" };
 export const orangeIcon: IconColor = { bg: "#ffecdf", icon: "#ff771d" };
 
+export const salesIcon = (
+  <ShoppingCartOutlined fontSize="inherit" color="inherit" />
+);
+export const revenueIcon = <AttachMoney fontSize="inherit" color="inherit" />;
+export const costumerIcon = <People fontSize="inherit" color="inherit" />;
+
 interface ICard {
   title: string;
   time?: TTime;
@@ -18,6 +29,7 @@ interface ICard {
   children?: ReactNode;
   iconColor?: IconColor;
   isStretch?: boolean;
+  svgIcon?: ReactNode;
 }
 
 const Card = ({
@@ -27,6 +39,7 @@ const Card = ({
   iconColor = blueIcon,
   children,
   isStretch = true,
+  svgIcon,
 }: ICard) => {
   return (
     <div className={clsx(styles.card, isStretch && styles.stretch)}>
@@ -49,7 +62,7 @@ const Card = ({
               style={{ backgroundColor: iconColor.bg, color: iconColor.icon }}
               className={styles.icon}
             >
-              <ShoppingCartOutlined fontSize="inherit" color="inherit" />
+              {svgIcon}
             </div>
             <div className={styles.content}>
               <div className={styles.title}>{value}</div>

@@ -3,8 +3,11 @@ import MyAreaChart from "../../components/area-chart/MyAreaChart";
 import BasicTable from "../../components/basic-table/BasicTable";
 import Card, {
   blueIcon,
+  costumerIcon,
   greenIcon,
   orangeIcon,
+  revenueIcon,
+  salesIcon,
 } from "../../components/card/Card";
 import MyPieChart from "../../components/my-pie-chart/MyPieChart";
 import MyRadarChart from "../../components/my-radar-chart/MyRadarChart";
@@ -20,9 +23,24 @@ const Dashboard = ({}: IDashboard) => {
     <main className={styles.dashboard}>
       <div className={styles.left}>
         <div className={styles.widgets}>
-          <Card value="145" title="Sales" iconColor={blueIcon} />
-          <Card value="$3,264" title="Revenue" iconColor={greenIcon} />
-          <Card value="1244" title="Costumer" iconColor={orangeIcon} />
+          <Card
+            svgIcon={salesIcon}
+            value="145"
+            title="Sales"
+            iconColor={blueIcon}
+          />
+          <Card
+            svgIcon={revenueIcon}
+            value="$3,264"
+            title="Revenue"
+            iconColor={greenIcon}
+          />
+          <Card
+            svgIcon={costumerIcon}
+            value="1244"
+            title="Costumer"
+            iconColor={orangeIcon}
+          />
         </div>
         <Card isStretch={false} title="Reports">
           <MyAreaChart />
